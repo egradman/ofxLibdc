@@ -63,7 +63,7 @@ namespace ofxLibdc {
 	dc1394color_coding_t Camera::getLibdcType(ofImageType imageType) {
 		switch(imageType) {
 			case OF_IMAGE_GRAYSCALE: return DC1394_COLOR_CODING_MONO8;
-			case OF_IMAGE_COLOR: return DC1394_COLOR_CODING_RGB8;
+			case OF_IMAGE_COLOR: return DC1394_COLOR_CODING_RAW8;
 			default: return DC1394_COLOR_CODING_RGB8;
 		}
 	}
