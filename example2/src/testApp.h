@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxLibdc.h"
+#include "ofxOpenCv.h"
 
 class testApp : public ofBaseApp {
 public:
@@ -16,6 +17,12 @@ public:
 	ofImage curFrame;
 	
 	// include these just to make sure they compile
-	//ofxLibdc::Grabber grabber;
-	//ofxLibdc::PointGrey pointGrey;
+	ofxLibdc::Grabber grabber;
+	ofxLibdc::PointGrey pointGrey;
+    
+    ofxCvGrayscaleImage rawImage;
+    ofxCvColorImage colorImage;
+    ofImage processed;
+    
+    float brightness;
 };
